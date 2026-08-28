@@ -20,8 +20,8 @@
     --stone:#f4efe6;
     --stone-deep:#ece4d4;
     --parchment:#f4efe6;
-    --brass:#b8935a;
-    --brass-soft:#cba874;
+    --brass:#7c8a68;
+    --brass-soft:#9aab84;
     --brown-collection:#3a2c1c;
     --line:#e3ddc9;
     --white:#ffffff;
@@ -38,7 +38,7 @@
     --accent-strong: var(--olive-deep);
     --accent-contrast: #f4efe6;
     --gold: var(--brass);
-    --radius: 8px;
+    --radius: 0px;
   }
 
   /* Il sito usa sempre la palette chiara di brand, indipendentemente dal tema
@@ -182,7 +182,7 @@
   .nav-login{
     font-size:0.82rem; font-weight:500; letter-spacing:0.02em;
     color:var(--text-soft); text-decoration:none;
-    border:1px solid var(--border); border-radius:999px;
+    border:1px solid var(--border); border-radius:0;
     padding:7px 16px; transition:all .2s ease; white-space:nowrap;
   }
   .nav-login:hover{ color:var(--accent-strong); border-color:var(--accent-strong); }
@@ -966,7 +966,7 @@
     background:var(--olive-deep);
     color:var(--parchment);
     border-bottom:2px solid var(--olive-deep);
-    border-radius:8px 8px 0 0;
+    border-radius:0;
     font-weight:700;
     padding:14px 18px;
   }
@@ -982,7 +982,7 @@
     font-weight:700;
     border-bottom:1px solid color-mix(in srgb, var(--accent-strong) 22%, transparent);
   }
-  table.compare tbody tr:last-child td.col-naia{ border-radius:0 0 8px 8px; }
+  table.compare tbody tr:last-child td.col-naia{ border-radius:0; }
   .table-scroll{ overflow-x:auto; }
   .badge-yes{ color:var(--accent-strong); font-weight:700; }
   .badge-no{ color:var(--text-soft); opacity:0.5; }
@@ -1035,9 +1035,16 @@
   }
   .footer-grid{
     display:grid;
-    grid-template-columns:1.4fr 1fr 1fr;
+    grid-template-columns:1.2fr 1fr 1fr 1fr;
     gap:40px;
   }
+  .footer-social{ display:flex; gap:16px; margin-top:20px; }
+  .footer-social a{
+    display:flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border:1px solid var(--border);
+    color:var(--text-soft); transition:all .2s ease;
+  }
+  .footer-social a:hover{ color:var(--accent-strong); border-color:var(--accent-strong); }
   @media (max-width:760px){ .footer-grid{grid-template-columns:1fr; gap:36px;} }
   .footer-grid h4{
     font-size:0.72rem;
@@ -1089,7 +1096,7 @@
     color:var(--text);
     border:1px solid var(--border);
     padding:13px 20px;
-    border-radius:999px;
+    border-radius:0;
     text-decoration:none;
     font-size:0.84rem;
     font-weight:600;
@@ -1677,17 +1684,23 @@
         </ul>
       </div>
       <div>
+        <h4>Ecosistema</h4>
+        <ul>
+          <li><a href="https://naiacollection.com" target="_blank" rel="noopener">NAÏA Collection (hub)</a></li>
+          <li><a href="https://travel.naiacollection.com" target="_blank" rel="noopener">NAÏA Travel</a></li>
+          <li><a href="https://revalue.naiacollection.com" target="_blank" rel="noopener">NAÏA ReValue</a></li>
+        </ul>
+      </div>
+      <div>
         <h4>Contatti</h4>
         <ul>
           <li><a href="https://wa.me/393516740842" target="_blank" rel="noopener">WhatsApp: +39 351 674 0842</a></li>
           <li><a href="mailto:info@naiacollection.com">info@naiacollection.com</a></li>
         </ul>
-        <h4 style="margin-top:28px;">Il gruppo NAIA</h4>
-        <ul>
-          <li><span class="brand-chip"><span class="dot" style="background:var(--brown-collection);"></span>NAIA Collection — per gli ospiti [link]</span></li>
-          <li><span class="brand-chip"><span class="dot" style="background:var(--olive);"></span>NAIA Home Rentals & Management — sei qui</span></li>
-          <li><span class="brand-chip"><span class="dot" style="background:var(--brass);"></span>NAIA Home Revalue — ristrutturazione [link]</span></li>
-        </ul>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h4v16H4z"/><path d="M12 9v11"/><path d="M12 13c0-2.2 1.8-4 4-4s4 1.8 4 4v7h-4v-7c0-1.1-.9-2-2-2s-2 .9-2 2"/><circle cx="6" cy="4.5" r="1.5"/></svg></a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
