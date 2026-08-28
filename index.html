@@ -221,22 +221,23 @@
     display:flex;
     flex-direction:column;
     align-items:center;
-    max-width:800px;
+    max-width:980px;
   }
   .hero-eyebrow{
-    font-size:0.76rem;
-    letter-spacing:0.2em;
+    font-size:clamp(1.05rem, 2.6vw, 1.5rem);
+    letter-spacing:0.06em;
     text-transform:uppercase;
-    font-weight:600;
+    font-weight:700;
     color:var(--brass-soft);
-    margin-bottom:26px;
+    margin-bottom:22px;
     display:block;
+    max-width:32ch;
   }
   .hero h1{
     color:var(--text-inverse);
-    font-size:clamp(2.2rem, 4.2vw, 3.3rem);
+    font-size:clamp(2rem, 3.6vw, 3.1rem);
     font-weight:500;
-    max-width:23ch;
+    max-width:40ch;
     margin:0 auto;
   }
   .hero h1 em{
@@ -390,11 +391,50 @@
   /* ============ PILLARS DIAGRAM ============ */
   .pillars-diagram{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:56px;
+    grid-template-columns:1fr auto 1fr;
+    gap:40px;
     align-items:center;
   }
   @media (max-width:860px){ .pillars-diagram{grid-template-columns:1fr; gap:36px;} }
+
+  .pillars-badges{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    padding:0;
+    margin:0;
+  }
+  .pillars-badges li{
+    font-size:0.76rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--text-soft);
+    padding-left:16px;
+    position:relative;
+    white-space:nowrap;
+  }
+  .pillars-badges li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--gold);
+  }
+  @media (max-width:860px){
+    .pillars-badges{
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px 22px;
+    }
+    .pillars-badges li{ white-space:normal; }
+  }
 
   .pillars-circle-wrap{
     position:relative;
@@ -512,6 +552,7 @@
   .pillars-detail-col{
     display:flex;
     flex-direction:column;
+    justify-content:center;
     align-self:stretch;
   }
 
@@ -1082,7 +1123,7 @@
   .reveal-group.is-visible > *:nth-child(6){ transition-delay:.55s; }
 
   /* Hero: entrance animation on load, staggered */
-  .hero-eyebrow, .hero h1, .hero p.lede, .hero-badges, .hero-actions{
+  .hero-eyebrow, .hero h1, .hero p.lede, .hero-actions{
     opacity:0;
     transform:translateY(18px);
     animation:heroIn .8s cubic-bezier(.2,.7,.2,1) forwards;
@@ -1090,8 +1131,7 @@
   .hero-eyebrow{ animation-delay:.05s; }
   .hero h1{ animation-delay:.18s; }
   .hero p.lede{ animation-delay:.34s; }
-  .hero-badges{ animation-delay:.48s; }
-  .hero-actions{ animation-delay:.58s; }
+  .hero-actions{ animation-delay:.48s; }
   @keyframes heroIn{
     to{ opacity:1; transform:translateY(0); }
   }
@@ -1124,7 +1164,7 @@
   nav.mainnav a:hover::after{ right:0; }
 
   @media (prefers-reduced-motion: reduce){
-    .reveal, .reveal-group > *, .hero-eyebrow, .hero h1, .hero p.lede, .hero-badges, .hero-actions{
+    .reveal, .reveal-group > *, .hero-eyebrow, .hero h1, .hero p.lede, .hero-actions{
       opacity:1 !important;
       transform:none !important;
       animation:none !important;
@@ -1166,11 +1206,6 @@
         <span class="hero-eyebrow">Hai una proprietà inutilizzata in Toscana?</span>
         <h1>Ogni anno che passa, la tua proprietà <strong>si deteriora e perde valore</strong> — ma i costi restano gli stessi.</h1>
         <p class="lede">Lasciarla ferma non la protegge, la consuma. <strong>Scopri come darle nuova vita</strong> e trasformarla in una rendita reale, grazie all'ecosistema NAIA: valorizzazione, gestione e <strong>visibilità internazionale</strong> in un unico sistema.</p>
-        <ul class="hero-badges">
-          <li>Presenza locale 365 giorni</li>
-          <li>Rete e clientela internazionale</li>
-          <li>Gestione a 360°</li>
-        </ul>
         <div class="hero-actions">
           <a href="#valutazione" class="btn btn-primary">Richiedi una valutazione riservata</a>
           <a href="https://wa.me/393516740842" target="_blank" rel="noopener" class="link-inline">Preferisci parlarne subito? Scrivici →</a>
@@ -1219,6 +1254,12 @@
             <p>Ogni pilastro rinforza il successivo</p>
           </div>
         </div>
+
+        <ul class="pillars-badges">
+          <li>Presenza locale 365 giorni</li>
+          <li>Rete e clientela internazionale</li>
+          <li>Gestione a 360°</li>
+        </ul>
 
         <div class="pillars-detail-col">
           <div class="pillar-detail" id="pillarDetail">
