@@ -229,9 +229,10 @@
     text-transform:uppercase;
     font-weight:700;
     color:var(--brass-soft);
-    margin-bottom:22px;
+    margin:0 auto 22px;
     display:block;
     max-width:32ch;
+    text-align:center;
   }
   .hero h1{
     color:var(--text-inverse);
@@ -391,8 +392,8 @@
   /* ============ PILLARS DIAGRAM ============ */
   .pillars-diagram{
     display:grid;
-    grid-template-columns:1fr auto 1fr;
-    gap:40px;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
     align-items:center;
   }
   @media (max-width:860px){ .pillars-diagram{grid-template-columns:1fr; gap:36px;} }
@@ -400,10 +401,12 @@
   .pillars-badges{
     list-style:none;
     display:flex;
-    flex-direction:column;
-    gap:18px;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px 32px;
     padding:0;
-    margin:0;
+    margin:48px 0 0;
   }
   .pillars-badges li{
     font-size:0.76rem;
@@ -426,13 +429,7 @@
     border-radius:50%;
     background:var(--gold);
   }
-  @media (max-width:860px){
-    .pillars-badges{
-      flex-direction:row;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:10px 22px;
-    }
+  @media (max-width:480px){
     .pillars-badges li{ white-space:normal; }
   }
 
@@ -1255,12 +1252,6 @@
           </div>
         </div>
 
-        <ul class="pillars-badges">
-          <li>Presenza locale 365 giorni</li>
-          <li>Rete e clientela internazionale</li>
-          <li>Gestione a 360°</li>
-        </ul>
-
         <div class="pillars-detail-col">
           <div class="pillar-detail" id="pillarDetail">
             <span class="pillar-detail-num" id="pillarDetailNum">01</span>
@@ -1269,6 +1260,12 @@
           </div>
         </div>
       </div>
+
+      <ul class="pillars-badges">
+        <li>Presenza locale 365 giorni</li>
+        <li>Rete e clientela internazionale</li>
+        <li>Gestione a 360°</li>
+      </ul>
     </div>
   </section>
 
