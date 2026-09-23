@@ -226,14 +226,6 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
   }
   nav.mainnav a:hover{ color:var(--accent-strong); }
   @media (max-width:860px){ nav.mainnav{display:none;} }
-  @media (max-width:860px){
-    .headbar{ display:grid; grid-template-columns:1fr auto 1fr; align-items:center; }
-    .headbar-right{ display:contents; }
-    .headbar-right .nav-login{ display:none; }
-    .brand{ order:1; justify-self:start; }
-    .headbar-right .btn-primary{ order:2; justify-self:center; }
-    .nav-toggle{ order:3; justify-self:end; }
-  }
   .headbar-right{ display:flex; align-items:center; gap:28px; }
   .nav-login{
     font-size:0.82rem; font-weight:500; letter-spacing:0.02em;
@@ -1317,6 +1309,15 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
   .mobile-nav .mobile-nav-actions{ display:flex; flex-direction:column; gap:12px; padding:18px 28px 24px; }
   .mobile-nav .mobile-nav-actions .btn, .mobile-nav .mobile-nav-actions .nav-login{ width:100%; text-align:center; justify-content:center; }
 
+
+  @media (max-width:860px){
+    .headbar{ display:grid; grid-template-columns:1fr auto 1fr; align-items:center; }
+    .headbar-right{ display:contents; }
+    .headbar-right .nav-login{ display:none; }
+    .brand{ order:1; justify-self:start; }
+    .headbar-right .btn-primary{ order:2; justify-self:center; }
+    .nav-toggle{ order:3; justify-self:end; }
+  }
 </style>
 </head>
 <body>
