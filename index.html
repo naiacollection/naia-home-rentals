@@ -1241,6 +1241,86 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
       animation:none !important;
     }
   }
+
+  /* ============ MOBILE NAV (hamburger) ============ */
+  .nav-toggle{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:38px;
+    height:38px;
+    padding:0;
+    background:none;
+    border:none;
+    cursor:pointer;
+    flex:none;
+  }
+  .nav-toggle span{
+    display:block;
+    width:22px;
+    height:2px;
+    background:var(--text);
+    transition:transform .25s ease, opacity .25s ease;
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+  @media (max-width:860px){ .nav-toggle{ display:flex; } }
+
+  .mobile-nav{
+    display:none;
+    flex-direction:column;
+    max-height:0;
+    overflow:hidden;
+    background:var(--bg);
+    border-top:1px solid transparent;
+    transition:max-height .35s ease;
+  }
+  @media (max-width:860px){ .mobile-nav{ display:flex; } }
+  .mobile-nav.is-open{ max-height:340px; border-top-color:var(--border); }
+  .mobile-nav a{
+    padding:16px 28px;
+    text-decoration:none;
+    color:var(--text-soft);
+    font-size:0.95rem;
+    font-weight:500;
+    border-bottom:1px solid var(--border);
+  }
+  .mobile-nav a:hover{ color:var(--accent-strong); }
+  .mobile-nav .mobile-nav-actions{ display:flex; flex-direction:column; gap:12px; padding:18px 28px 24px; }
+  .mobile-nav .mobile-nav-actions .btn, .mobile-nav .mobile-nav-actions .nav-login{ width:100%; text-align:center; justify-content:center; }
+
+  /* ============ SHOWCASE PROPRIETA ============ */
+  .showcase-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    margin-top:48px;
+  }
+  .showcase-card{
+    margin:0;
+    overflow:hidden;
+    background:var(--bg-raised);
+  }
+  .showcase-card .showcase-img-wrap{ overflow:hidden; }
+  .showcase-card img{
+    width:100%;
+    height:360px;
+    object-fit:cover;
+    display:block;
+    transition:transform .6s cubic-bezier(.2,.7,.2,1);
+  }
+  .showcase-card:hover img{ transform:scale(1.05); }
+  .showcase-card figcaption{
+    padding:18px 20px 22px;
+    font-size:0.92rem;
+    color:var(--text-soft);
+  }
+  @media (max-width:720px){
+    .showcase-grid{ grid-template-columns:1fr; gap:20px; }
+    .showcase-card img{ height:260px; }
+  }
 </style>
 </head>
 <body>
@@ -1265,10 +1345,22 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
         <a href="#territorio">Territorio</a>
         <a href="#come-funziona">Come funziona</a>
       </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
       <a class="nav-login" href="https://travel.naiacollection.com/dashboard" target="_blank" rel="noopener">Accedi</a>
       <a href="https://travel.naiacollection.com/proponi-la-tua-struttura?utm_source=homerentals&utm_medium=website&utm_campaign=cta" class="btn btn-primary">Valuta la tua proprietà</a>
     </div>
   </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#perche-naia">Perché NAIA</a>
+    <a href="#territorio">Territorio</a>
+    <a href="#come-funziona">Come funziona</a>
+    <div class="mobile-nav-actions">
+      <a class="nav-login" href="https://travel.naiacollection.com/dashboard" target="_blank" rel="noopener">Accedi</a>
+      <a href="https://travel.naiacollection.com/proponi-la-tua-struttura?utm_source=homerentals&utm_medium=website&utm_campaign=cta" class="btn btn-primary">Valuta la tua proprietà</a>
+    </div>
+  </nav>
 </header>
 
 <main id="top">
@@ -1288,7 +1380,27 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- ============ I TRE PILASTRI ============ -->
+  <!-- ============ SHOWCASE PROPRIETA ============ -->
+<section id="showcase-proprieta">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Il risultato che otteniamo</span>
+      <h2>Non solo affitti: <strong>esperienze curate nei minimi dettagli</strong></h2>
+    </div>
+    <div class="showcase-grid">
+      <figure class="showcase-card">
+        <div class="showcase-img-wrap"><img src="salotto-lusso.jpg" alt="Interni curati di una proprieta gestita da NAIA" loading="lazy" width="1600" height="900"></div>
+        <figcaption>Interni pensati per stupire, dal primo sguardo.</figcaption>
+      </figure>
+      <figure class="showcase-card">
+        <div class="showcase-img-wrap"><img src="villa-piscina-toscana.jpg" alt="Villa toscana con piscina gestita da NAIA" loading="lazy" width="1600" height="900"></div>
+        <figcaption>Ville e proprieta esclusive in tutta la Toscana.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ I TRE PILASTRI ============ -->
   <section id="perche-naia" style="background:var(--bg-tint);">
     <div class="wrap">
       <div class="section-head">
@@ -1781,7 +1893,8 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
     );
     var staggerGroups = [
       $all('.process-item'),
-      $all('.footer-grid > div')
+      $all('.footer-grid > div'),
+      $all('.showcase-card')
     ];
 
     singleTargets.forEach(function(el){ el.classList.add('reveal'); });
@@ -2002,6 +2115,23 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
   }
   setupAutoRotate($all(".map-node"), activateMapNode, 3000);
 })();
+
+  // ============ MOBILE NAV TOGGLE ============
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var panel = document.getElementById('mobileNav');
+    if (!toggle || !panel) return;
+    toggle.addEventListener('click', function(){
+      var open = panel.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    $all('#mobileNav a').forEach(function(a){
+      a.addEventListener('click', function(){
+        panel.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
 </script>
 </body>
 </html>
