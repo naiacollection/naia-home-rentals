@@ -267,8 +267,8 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
   /* ============ HERO ============ */
   .hero{
     background:
-      linear-gradient(180deg, rgba(10,9,8,0.55) 0%, rgba(10,9,8,0.78) 55%, var(--bg-inverse) 100%),
-      url('hero-rentals.jpg') center 30% / cover no-repeat,
+      linear-gradient(180deg, rgba(10,9,8,0.6) 0%, rgba(10,9,8,0.8) 55%, var(--bg-inverse) 100%),
+      url('villa-piscina-toscana.jpg') center 40% / cover no-repeat,
       var(--bg-inverse);
     color:var(--text-inverse);
     padding:110px 0 108px;
@@ -1074,6 +1074,12 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
   }
   .diy-pain-subtitle strong{ font-style:normal; }
   .diy-pain p + p{ margin-top:16px; }
+  .diy-pain{
+    background:
+      linear-gradient(180deg, rgba(10,9,8,0.82) 0%, rgba(10,9,8,0.88) 55%, rgba(10,9,8,0.82) 100%),
+      url('salotto-lusso.jpg') center 35% / cover no-repeat,
+      var(--bg-inverse);
+  }
 
   /* ============ FOOTER ============ */
   footer.site{
@@ -1291,36 +1297,6 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
   .mobile-nav .mobile-nav-actions{ display:flex; flex-direction:column; gap:12px; padding:18px 28px 24px; }
   .mobile-nav .mobile-nav-actions .btn, .mobile-nav .mobile-nav-actions .nav-login{ width:100%; text-align:center; justify-content:center; }
 
-  /* ============ SHOWCASE PROPRIETA ============ */
-  .showcase-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:28px;
-    margin-top:48px;
-  }
-  .showcase-card{
-    margin:0;
-    overflow:hidden;
-    background:var(--bg-raised);
-  }
-  .showcase-card .showcase-img-wrap{ overflow:hidden; }
-  .showcase-card img{
-    width:100%;
-    height:360px;
-    object-fit:cover;
-    display:block;
-    transition:transform .6s cubic-bezier(.2,.7,.2,1);
-  }
-  .showcase-card:hover img{ transform:scale(1.05); }
-  .showcase-card figcaption{
-    padding:18px 20px 22px;
-    font-size:0.92rem;
-    color:var(--text-soft);
-  }
-  @media (max-width:720px){
-    .showcase-grid{ grid-template-columns:1fr; gap:20px; }
-    .showcase-card img{ height:260px; }
-  }
 </style>
 </head>
 <body>
@@ -1380,27 +1356,7 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
     </div>
   </section>
 
-  <!-- ============ SHOWCASE PROPRIETA ============ -->
-<section id="showcase-proprieta">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Il risultato che otteniamo</span>
-      <h2>Non solo affitti: <strong>esperienze curate nei minimi dettagli</strong></h2>
-    </div>
-    <div class="showcase-grid">
-      <figure class="showcase-card">
-        <div class="showcase-img-wrap"><img src="salotto-lusso.jpg" alt="Interni curati di una proprieta gestita da NAIA" loading="lazy" width="1600" height="900"></div>
-        <figcaption>Interni pensati per stupire, dal primo sguardo.</figcaption>
-      </figure>
-      <figure class="showcase-card">
-        <div class="showcase-img-wrap"><img src="villa-piscina-toscana.jpg" alt="Villa toscana con piscina gestita da NAIA" loading="lazy" width="1600" height="900"></div>
-        <figcaption>Ville e proprieta esclusive in tutta la Toscana.</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ I TRE PILASTRI ============ -->
+  <!-- ============ I TRE PILASTRI ============ -->
   <section id="perche-naia" style="background:var(--bg-tint);">
     <div class="wrap">
       <div class="section-head">
@@ -1893,8 +1849,7 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
     );
     var staggerGroups = [
       $all('.process-item'),
-      $all('.footer-grid > div'),
-      $all('.showcase-card')
+      $all('.footer-grid > div')
     ];
 
     singleTargets.forEach(function(el){ el.classList.add('reveal'); });
