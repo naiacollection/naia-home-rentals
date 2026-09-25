@@ -9,6 +9,21 @@
   gtag('js', new Date());
   gtag('config', 'G-HL8JPZB13E');
 </script>
+<!-- Contact click tracking (mailto/WhatsApp) -->
+<script>
+(function(){
+  document.addEventListener('click', function(ev){
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+    if(!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('mailto:') === 0) {
+      if (window.gtag) gtag('event','contact_click',{method:'email', link_url: href});
+    } else if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp.com') !== -1) {
+      if (window.gtag) gtag('event','contact_click',{method:'whatsapp', link_url: href});
+    }
+  }, true);
+})();
+</script>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -2008,6 +2023,7 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
       var btn = e.target;
       btn.textContent = "Richiesta inviata";
       btn.disabled = true;
+      if (window.gtag) { gtag('event', 'generate_lead', { lead_type: 'affitto_breve', form_id: 'homerentals_proponi_proprieta' }); }
       var backBtn = btn.parentElement ? btn.parentElement.querySelector(".calc-back") : null;
       if (backBtn) backBtn.disabled = true;
     }
