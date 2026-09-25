@@ -2018,8 +2018,30 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
         alert("Inserisci nome e cognome ed email per inviare la proposta.");
         return;
       }
-      // Placeholder: replace with real form submission (API, CRM, email service)
-      // when the backend integration for this domain is wired up.
+      var payload = {
+        who: state.who || "",
+        type: state.type || "",
+        propName: $("#propName").value.trim(),
+        city: state.city || "",
+        region: state.region || "",
+        address: $("#address").value.trim(),
+        sqm: $("#sqm").value.trim(),
+        rooms: $("#rooms").value.trim(),
+        baths: $("#baths").value.trim(),
+        status: state.status || "",
+        market: state.market || "",
+        revenue: $("#revenue").value.trim(),
+        availability: $("#availability").value,
+        name: name,
+        phone: $("#phone").value.trim(),
+        email: email,
+        notes: $("#notes").value.trim()
+      };
+      fetch("https://script.google.com/macros/s/AKfycbwsVg-W3EEs1Ac6wt56hHLyApqA7FeuYCFY-E-xdqpz6bEo4t89fDtHxkjbn4C4hg6qiw/exec", {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(payload)
+      }).catch(function(err){ if (window.console) console.error("Errore invio proposta:", err); });
       var btn = e.target;
       btn.textContent = "Richiesta inviata";
       btn.disabled = true;
