@@ -1756,6 +1756,11 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
           </div>
         </div>
       </form>
+      <div id="calc-success" class="calc-card" style="display:none;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:var(--olive);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.6rem;">&#10003;</div>
+        <h3 style="margin-bottom:12px;">Grazie per aver compilato il form!</h3>
+        <p style="color:var(--ink-soft);margin:0;">Abbiamo ricevuto la tua richiesta. Il nostro team la analizzerà e ti ricontatteremo entro 48 ore.</p>
+      </div>
       <p class="microcopy">Preferisci parlarne subito? <a href="https://wa.me/393516740842" target="_blank" rel="noopener" style="color:var(--brass-soft);font-weight:600;">Scrivici su WhatsApp →</a></p>
     </div>
   </section>
@@ -2048,6 +2053,13 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
       if (window.gtag) { gtag('event', 'generate_lead', { lead_type: 'affitto_breve', form_id: 'homerentals_proponi_proprieta' }); }
       var backBtn = btn.parentElement ? btn.parentElement.querySelector(".calc-back") : null;
       if (backBtn) backBtn.disabled = true;
+      var formEl = document.getElementById("calcForm");
+      var successEl = document.getElementById("calc-success");
+      if (formEl && successEl){
+        formEl.style.display = "none";
+        successEl.style.display = "block";
+        successEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
   };
 
