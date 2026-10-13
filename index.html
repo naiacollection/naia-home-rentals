@@ -1594,14 +1594,11 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
           <i><b id="bar2"></b></i>
           <i><b id="bar3"></b></i>
           <i><b id="bar4"></b></i>
-          <i><b id="bar5"></b></i>
-          <i><b id="bar6"></b></i>
-          <i><b id="bar7"></b></i>
         </div>
 
         <!-- STEP 1: Chi sei -->
         <div class="calc-step active" data-step="1">
-          <span class="step-label">Passo 1 di 7</span>
+          <span class="step-label">Passo 1 di 4</span>
           <h3>Come ci stai contattando?</h3>
           <p class="microcopy" style="text-align:left;color:var(--ink-soft);margin:-8px 0 16px;">Seleziona la categoria che meglio ti descrive.</p>
           <div class="option-grid" id="whoOptions">
@@ -1618,7 +1615,7 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
 
         <!-- STEP 2: Tipo di immobile -->
         <div class="calc-step" data-step="2">
-          <span class="step-label">Passo 2 di 7</span>
+          <span class="step-label">Passo 2 di 4</span>
           <h3>Che tipo di immobile è?</h3>
           <p class="microcopy" style="text-align:left;color:var(--ink-soft);margin:-8px 0 16px;">Seleziona la categoria che descrive meglio la struttura.</p>
 
@@ -1630,29 +1627,25 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
             <button type="button" class="option" data-value="Casale / Agriturismo">Casale / Agriturismo</button>
           </div>
 
-          <label for="propName">Nome della struttura (se già ha un nome)</label>
-          <input type="text" id="propName" placeholder="Es. Villa Serena, Podere del Sole..." style="margin-bottom:16px;">
-
           <div class="calc-nav">
             <button type="button" class="calc-back" onclick="naiaCalc.back(2)">Indietro</button>
             <button type="button" class="btn btn-primary" id="toStep3" disabled onclick="naiaCalc.next(2)">Continua</button>
           </div>
         </div>
 
-        <!-- STEP 3: Dove si trova -->
+        <!-- STEP 3: Dove si trova + prima volta -->
         <div class="calc-step" data-step="3">
-          <span class="step-label">Passo 3 di 7</span>
+          <span class="step-label">Passo 3 di 4</span>
           <h3>Dove si trova?</h3>
-          <p class="microcopy" style="text-align:left;color:var(--ink-soft);margin:-8px 0 16px;">Indicaci la posizione dell'immobile.</p>
 
-          <label for="city">Città / Zona *</label>
-          <input type="text" id="city" placeholder="Es. Montecatini Terme" style="margin-bottom:16px;">
+          <label for="city">Dove si trova l'immobile? *</label>
+          <input type="text" id="city" placeholder="Es. Montecatini Terme, Toscana" style="margin-bottom:20px;">
 
-          <label for="region">Regione *</label>
-          <input type="text" id="region" placeholder="Es. Toscana" style="margin-bottom:16px;">
-
-          <label for="address">Indirizzo completo</label>
-          <input type="text" id="address" placeholder="Es. Via delle Vigne 12 (facoltativo)" style="margin-bottom:16px;">
+          <label>È la prima volta che affitti?</label>
+          <div class="option-grid" id="marketOptions" style="margin-bottom:0;">
+            <button type="button" class="option" data-value="Sì, è la prima volta">Sì, è la prima volta</button>
+            <button type="button" class="option" data-value="No, l'ho già affittata">No, l'ho già affittata</button>
+          </div>
 
           <div class="calc-nav">
             <button type="button" class="calc-back" onclick="naiaCalc.back(3)">Indietro</button>
@@ -1660,89 +1653,9 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
           </div>
         </div>
 
-        <!-- STEP 4: Dimensioni e stato -->
+        <!-- STEP 4: Contatti -->
         <div class="calc-step" data-step="4">
-          <span class="step-label">Passo 4 di 7</span>
-          <h3>Dimensioni e stato</h3>
-          <p class="microcopy" style="text-align:left;color:var(--ink-soft);margin:-8px 0 16px;">Qualche dettaglio in più sull'immobile.</p>
-
-          <div class="field-row">
-            <div>
-              <label for="sqm">Mq</label>
-              <input type="number" id="sqm" min="20" max="2000" placeholder="Es. 200">
-            </div>
-            <div>
-              <label for="rooms">Camere</label>
-              <input type="number" id="rooms" min="1" max="20" placeholder="Es. 4">
-            </div>
-            <div>
-              <label for="baths">Bagni</label>
-              <input type="number" id="baths" min="1" max="20" placeholder="Es. 3">
-            </div>
-          </div>
-
-          <label style="margin-top:4px;">Stato dell'immobile</label>
-          <div class="option-grid" id="statusOptions">
-            <button type="button" class="option" data-value="Nuovo / Appena ristrutturato">Nuovo / Appena ristrutturato</button>
-            <button type="button" class="option" data-value="Ristrutturato (&lt; 5 anni)">Ristrutturato (&lt; 5 anni)</button>
-            <button type="button" class="option" data-value="Buono stato">Buono stato</button>
-            <button type="button" class="option" data-value="Da ristrutturare">Da ristrutturare</button>
-          </div>
-
-          <div class="calc-nav">
-            <button type="button" class="calc-back" onclick="naiaCalc.back(4)">Indietro</button>
-            <button type="button" class="btn btn-primary" onclick="naiaCalc.next(4)">Continua</button>
-          </div>
-        </div>
-
-        <!-- STEP 5: Storico sul mercato -->
-        <div class="calc-step" data-step="5">
-          <span class="step-label">Passo 5 di 7</span>
-          <h3>È già sul mercato degli affitti?</h3>
-          <p class="microcopy" style="text-align:left;color:var(--ink-soft);margin:-8px 0 16px;">Ci aiuta a capire da dove partiamo.</p>
-
-          <div class="option-grid" id="marketOptions" style="margin-bottom:0;">
-            <button type="button" class="option" data-value="Sì, è già affittata">Sì, è già affittata</button>
-            <button type="button" class="option" data-value="No, è la prima volta">No, è la prima volta</button>
-          </div>
-
-          <div class="calc-nav">
-            <button type="button" class="calc-back" onclick="naiaCalc.back(5)">Indietro</button>
-            <button type="button" class="btn btn-primary" onclick="naiaCalc.next(5)">Continua</button>
-          </div>
-        </div>
-
-        <!-- STEP 6: Aspettative -->
-        <div class="calc-step" data-step="6">
-          <span class="step-label">Passo 6 di 7</span>
-          <h3>Aspettative</h3>
-          <p class="microcopy" style="text-align:left;color:var(--ink-soft);margin:-8px 0 16px;">Queste informazioni ci aiutano a capire il potenziale dell'immobile.</p>
-
-          <div class="field-row" style="grid-template-columns:1fr 1fr;">
-            <div>
-              <label for="revenue">Fatturato annuo atteso (€)</label>
-              <input type="number" id="revenue" min="0" placeholder="Es. 60000">
-            </div>
-            <div>
-              <label for="availability">Disponibilità</label>
-              <select id="availability" style="width:100%;padding:13px 14px;border:1px solid var(--stone-deep);border-radius:var(--radius);font-size:0.98rem;background:var(--white);color:var(--ink);font-family:inherit;">
-                <option value="">Seleziona...</option>
-                <option value="Tutto l'anno">Tutto l'anno</option>
-                <option value="Stagionale">Stagionale</option>
-                <option value="Part-time / Pochi mesi">Part-time / Pochi mesi</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="calc-nav">
-            <button type="button" class="calc-back" onclick="naiaCalc.back(6)">Indietro</button>
-            <button type="button" class="btn btn-primary" onclick="naiaCalc.next(6)">Continua</button>
-          </div>
-        </div>
-
-        <!-- STEP 7: Contatti -->
-        <div class="calc-step" data-step="7">
-          <span class="step-label">Passo 7 di 7</span>
+          <span class="step-label">Passo 4 di 4</span>
           <h3>Come ti contattiamo</h3>
           <p class="microcopy" style="text-align:left;color:var(--ink-soft);margin:-8px 0 16px;">Ultimo passo. Ti risponderemo entro 48 ore.</p>
 
@@ -1766,7 +1679,7 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
           <p class="microcopy" style="text-align:left;color:var(--ink-soft);margin-top:14px;">Inviando questo modulo accetti che NAIA Home Rentals &amp; Management utilizzi i tuoi dati per contattarti riguardo alla tua proposta. I tuoi dati non saranno condivisi con terze parti.</p>
 
           <div class="calc-nav">
-            <button type="button" class="calc-back" onclick="naiaCalc.back(7)">Indietro</button>
+            <button type="button" class="calc-back" onclick="naiaCalc.back(4)">Indietro</button>
             <button type="button" class="btn btn-primary" onclick="naiaCalc.submit(event)">Invia proposta</button>
           </div>
         </div>
@@ -1954,7 +1867,7 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
   })();
 
   function updateBars(step){
-    for (var i=1;i<=7;i++){
+    for (var i=1;i<=4;i++){
       var bar = $("#bar"+i);
       if(!bar) continue;
       bar.style.width = (i <= step) ? "100%" : "0%";
@@ -1995,13 +1908,11 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
   // Step 3: citta + regione - richiesti per continuare
   function validateStep3(){
     var city = $("#city").value.trim();
-    var region = $("#region").value.trim();
-    $("#toStep4").disabled = !(city && region);
+    $("#toStep4").disabled = !city;
   }
   (function(){
-    var cityEl = $("#city"), regionEl = $("#region");
+    var cityEl = $("#city");
     if (cityEl) cityEl.addEventListener("input", validateStep3);
-    if (regionEl) regionEl.addEventListener("input", validateStep3);
   })();
 
   // Step 4: stato dell'immobile (single choice)
@@ -2026,7 +1937,7 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
     next: function(fromStep){
       if (fromStep === 3){
         state.city = $("#city").value.trim();
-        state.region = $("#region").value.trim();
+        state.region = "";
       }
       showStep(fromStep + 1, { scroll: true });
     },
@@ -2043,17 +1954,17 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
       var payload = {
         who: state.who || "",
         type: state.type || "",
-        propName: $("#propName").value.trim(),
+        propName: "",
         city: state.city || "",
         region: state.region || "",
-        address: $("#address").value.trim(),
-        sqm: $("#sqm").value.trim(),
-        rooms: $("#rooms").value.trim(),
-        baths: $("#baths").value.trim(),
+        address: "",
+        sqm: "",
+        rooms: "",
+        baths: "",
         status: state.status || "",
         market: state.market || "",
-        revenue: $("#revenue").value.trim(),
-        availability: $("#availability").value,
+        revenue: "",
+        availability: "",
         name: name,
         phone: $("#phone").value.trim(),
         email: email,
