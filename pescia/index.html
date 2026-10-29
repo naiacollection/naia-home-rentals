@@ -18,8 +18,10 @@
     var href = a.getAttribute('href') || '';
     if (href.indexOf('mailto:') === 0) {
       if (window.gtag) gtag('event','contact_click',{method:'email', link_url: href});
+      if (window.fbq) fbq('track','Contact',{method:'email'});
     } else if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp.com') !== -1) {
       if (window.gtag) gtag('event','contact_click',{method:'whatsapp', link_url: href});
+      if (window.fbq) fbq('track','Contact',{method:'whatsapp'});
     }
   }, true);
 })();
@@ -42,32 +44,455 @@ src="https://www.facebook.com/tr?id=1833565181412626&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gestione Affitti Brevi a Pescia | NAIA Home Rentals</title>
-<meta name="description" content="Gestione affitti brevi a Pescia e in Valdinievole: ospiti, pulizie, prezzi e manutenzioni curati da NAIA. Richiedi una valutazione gratuita della tua proprietà.">
+<meta name="description" content="Gestione affitti brevi a Pescia e in Valdinievole: team locale, un unico referente, gestione completa e trasparente. Valutazione gratuita e riservata.">
 <link rel="canonical" href="https://homerentals.naiacollection.com/pescia/">
-<meta property="og:type" content="website"><meta property="og:title" content="Gestione Affitti Brevi a Pescia | NAIA Home Rentals"><meta property="og:description" content="Gestione affitti brevi a Pescia e in Valdinievole: ospiti, pulizie, prezzi e manutenzioni curati da NAIA. Richiedi una valutazione gratuita della tua proprietà."><meta property="og:url" content="https://homerentals.naiacollection.com/pescia/"><meta property="og:locale" content="it_IT">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NAÏA Collection">
+<meta property="og:title" content="Gestione Affitti Brevi a Pescia | NAIA Home Rentals">
+<meta property="og:description" content="Gestione affitti brevi a Pescia e in Valdinievole: team locale, un unico referente, gestione completa e trasparente. Valutazione gratuita e riservata.">
+<meta property="og:url" content="https://homerentals.naiacollection.com/pescia/">
+<meta property="og:image" content="https://homerentals.naiacollection.com/naia-brand-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gestione Affitti Brevi a Pescia | NAIA Home Rentals">
+<meta name="twitter:description" content="Gestione affitti brevi a Pescia e in Valdinievole: team locale, un unico referente, gestione completa e trasparente. Valutazione gratuita e riservata.">
+<meta name="twitter:image" content="https://homerentals.naiacollection.com/naia-brand-og.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "NAIA Home Rentals & Management", "url": "https://homerentals.naiacollection.com/pescia/", "image": "https://homerentals.naiacollection.com/naia-brand-og.jpg", "logo": "https://homerentals.naiacollection.com/favicon-512x512.png", "areaServed": "Pescia", "serviceType": "Gestione affitti brevi", "telephone": "+39 351 674 0842", "email": "info@naiacollection.com", "address": {"@type": "PostalAddress", "streetAddress": "Via Solferino 5", "addressLocality": "Montecatini Terme", "postalCode": "51016", "addressRegion": "PT", "addressCountry": "IT"}, "parentOrganization": {"@type": "Organization", "name": "NAÏA Collection SRL", "url": "https://www.naiacollection.com/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Gestite proprietà a Pescia e dintorni?", "acceptedAnswer": {"@type": "Answer", "text": "Sì: Pescia, Uzzano, Chiesina Uzzanese, Collodi, Monsummano Terme, Montecatini Terme e tutta la Valdinievole."}}, {"@type": "Question", "name": "Come richiedo una valutazione?", "acceptedAnswer": {"@type": "Answer", "text": "Compila il modulo qui sotto o scrivici su WhatsApp: ti rispondiamo con una prima analisi gratuita e senza impegno."}}, {"@type": "Question", "name": "Quali servizi sono inclusi?", "acceptedAnswer": {"@type": "Answer", "text": "Annunci, prezzi, prenotazioni, check-in, pulizie, biancheria, manutenzioni e assistenza ospiti."}}]}</script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2026">
 <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2026" sizes="48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2026">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2026">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2026">
-<meta property="og:image" content="https://homerentals.naiacollection.com/naia-brand-og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://homerentals.naiacollection.com/naia-brand-og.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","name":"NAIA Home Rentals & Management","url":"https://homerentals.naiacollection.com/pescia/","telephone":"+39 351 674 0842","email":"info@naiacollection.com","areaServed":"Pescia","address":{"@type":"PostalAddress","streetAddress":"Via Solferino 5","addressLocality":"Montecatini Terme","postalCode":"51016","addressRegion":"PT","addressCountry":"IT"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Gestite proprietà a Pescia e dintorni?","acceptedAnswer":{"@type":"Answer","text":"Sì: Pescia, Uzzano, Chiesina Uzzanese, Collodi, Monsummano Terme, Montecatini Terme e tutta la Valdinievole."}},{"@type":"Question","name":"Come richiedo una valutazione?","acceptedAnswer":{"@type":"Answer","text":"Compila il modulo nella home o scrivici su WhatsApp: ti rispondiamo con una prima analisi gratuita e senza impegno."}},{"@type":"Question","name":"Quali servizi sono inclusi?","acceptedAnswer":{"@type":"Answer","text":"Annunci, prezzi, prenotazioni, check-in, pulizie, biancheria, manutenzioni e assistenza ospiti."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://homerentals.naiacollection.com/"},{"@type":"ListItem","position":2,"name":"Pescia","item":"https://homerentals.naiacollection.com/pescia/"}]}]}</script>
-<style>:root{--ink:#40332D;--soft:#6b5247;--acc:#8E614B;--bg:#F2EEEB;--line:#E3D9CE}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 'DM Sans',system-ui,sans-serif}h1,h2{font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;line-height:1.15;margin:0}h1{font-size:clamp(2.2rem,5vw,3.4rem)}h2{margin:44px 0 14px;font-size:clamp(1.5rem,2.6vw,2rem)}h3{font-size:1.1rem;margin:0 0 6px}.wrap{max-width:1080px;margin:0 auto;padding:0 24px}header{border-bottom:1px solid var(--line)}.headbar{display:flex;justify-content:space-between;align-items:center;padding-top:12px;padding-bottom:12px}.btn{display:inline-block;padding:13px 22px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:600;font-size:.92rem;background:transparent}.btn-primary{background:var(--ink);color:var(--bg)}.btn-primary:hover{background:var(--acc);border-color:var(--acc)}.eyebrow{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:14px}.zone-hero{padding:80px 0 56px;background:#ebe5e0}.zone-hero h1{max-width:20ch}.zone-hero p{margin:18px 0 0;max-width:60ch;color:var(--soft);font-size:1.1rem}.zone-hero .btn{margin-top:26px}.zone-body{padding:40px 0 72px}.zone-body p,.zone-body li{color:var(--soft);font-size:1.03rem;line-height:1.7;max-width:68ch}.zone-body ul{margin:12px 0 0 20px}.zone-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.crumbs{font-size:.9rem;margin-bottom:18px}.crumbs a{color:var(--acc)}.faq-item{border-top:1px solid var(--line);padding:18px 0}footer.site{border-top:1px solid var(--line);padding:28px 0;font-size:.82rem;color:var(--soft)}.footer-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}@media(max-width:600px){.btn{width:100%;text-align:center}}@media(max-width:600px){header .brand img{height:26px!important}.headbar{gap:12px}.headbar .btn{padding:11px 14px;font-size:.84rem;white-space:nowrap}}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&display=swap" rel="stylesheet">
+<style>
+/* Layout: pagina unica a colonna, bande alternate marrone / sabbia, un solo form in fondo. Brand NAÏA 2026. */
+:root{
+  --marrone:#4F3B31; --avorio:#F5F1E0; --banda:#EFEAE4; --sabbia:#F8F5F2; --oro:#CBB69C; --marrone-chiaro:#8B6750; --terracotta:#C4846A; --inchiostro:#2B201B;
+  --linea:rgba(79,59,49,.18); --linea-inv:rgba(245,241,224,.22);
+  --display:'Fraunces',Georgia,serif; --testo:'DM Sans',Arial,Helvetica,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sabbia);color:var(--marrone);font:400 16px/1.65 var(--testo);-webkit-font-smoothing:antialiased;padding-bottom:76px}
+h1,h2,h3{font-family:var(--display);font-weight:300;margin:0;text-wrap:balance;line-height:1.15}
+h2{font-size:clamp(1.8rem,4vw,2.6rem)}
+h2 strong{font-weight:400;color:var(--inchiostro)}
+.dark h2 strong{color:var(--avorio)}
+h3{font-size:1.25rem;font-weight:400}
+p{margin:0}
+a{color:inherit}
+.in{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:84px}
+.band.dark{background:var(--marrone);color:var(--avorio)}
+.band.sand2{background:var(--banda)}
+.eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--marrone-chiaro);margin-bottom:16px;display:block}
+.dark .eyebrow{color:var(--oro)}
+.lead{max-width:60ch;margin-top:18px;font-size:1.05rem;color:rgba(79,59,49,.82)}
+.dark .lead{color:rgba(245,241,224,.8)}
+.btn{display:inline-block;background:var(--terracotta);color:var(--inchiostro);text-decoration:none;font-weight:500;font-size:1rem;padding:16px 34px;border-radius:8px;border:0;cursor:pointer;font-family:var(--testo);transition:background-color .2s}
+.btn:hover{background:#d09279}
+.btn:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--terracotta);outline-offset:3px}
+.btn.ghost{background:transparent;color:inherit;border:1px solid currentColor}
+.btn.ghost:hover{background:rgba(245,241,224,.1)}
+
+/* header */
+header{background:var(--marrone);position:sticky;top:env(safe-area-inset-top,0px);z-index:10}
+header .in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+header img{height:30px;width:auto;display:block}
+header nav{display:flex;gap:26px;align-items:center;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
+header nav a{color:var(--avorio);text-decoration:none;opacity:.8}
+header nav a:hover{opacity:1}
+header .btn{padding:10px 20px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:760px){header nav a:not(.btn){display:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);margin-bottom:22px}
+.hero h1 em{font-style:italic;color:var(--oro)}
+.hero .sub{max-width:48ch;font-size:1.08rem;color:rgba(245,241,224,.85)}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.trust{margin-top:26px;font-size:.8rem;letter-spacing:.04em;color:var(--oro)}
+.photo{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:4px;overflow:hidden;background:
+  linear-gradient(180deg,rgba(79,59,49,0) 40%,rgba(43,32,27,.55)),
+  linear-gradient(135deg,#8B6750,#CBB69C 55%,#a9b7a0)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.wide{display:block;width:100%;aspect-ratio:1600/650;object-fit:cover;border-radius:4px;margin-top:40px}
+.photo span{position:absolute;left:16px;right:16px;bottom:14px;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--avorio);opacity:.9}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:36px}.photo{aspect-ratio:16/10}}
+
+/* promesse */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--linea)}
+.three>div{padding:30px 30px 0 0;min-width:0}
+.three h3{margin-bottom:10px}
+.three p{font-size:.95rem;color:rgba(79,59,49,.8)}
+@media(max-width:760px){.three{grid-template-columns:1fr}.three>div{padding-right:0;padding-bottom:6px}}
+
+/* problema */
+.problem{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.problem p+p{margin-top:16px}
+@media(max-width:860px){.problem{grid-template-columns:1fr;gap:24px}}
+
+/* ecosistema */
+.eco{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.eco>div{background:var(--sabbia);border:1px solid var(--linea);border-radius:6px;padding:28px;min-width:0}
+.eco small{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--marrone-chiaro);margin-bottom:12px}
+.eco h3{margin-bottom:10px}
+.eco p{font-size:.93rem;color:rgba(79,59,49,.8)}
+.tagline{margin-top:30px;font-family:var(--display);font-style:italic;font-weight:300;font-size:1.25rem;color:var(--marrone-chiaro)}
+@media(max-width:860px){.eco{grid-template-columns:1fr}}
+
+/* metodo */
+.steps{list-style:none;padding:0;margin:44px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
+.steps li{border-top:1px solid var(--linea-inv);padding-top:22px;min-width:0}
+.steps b{display:block;font-family:var(--display);font-weight:300;font-size:2rem;color:var(--oro);margin-bottom:8px}
+.steps h3{margin-bottom:8px}
+.steps p{font-size:.92rem;color:rgba(245,241,224,.78)}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+
+/* strategia: circolo virtuoso */
+.circle{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:56px;align-items:center;margin-top:44px}
+.cwrap{position:relative;aspect-ratio:1;width:100%;max-width:420px;margin:0 auto}
+.cwrap svg{position:absolute;inset:0;width:100%;height:100%}
+.arc{fill:none;stroke:var(--marrone-chiaro);stroke-width:1.5;stroke-dasharray:3 5}
+.node{position:absolute;transform:translate(-50%,-50%);background:var(--sabbia);color:var(--marrone);border:1px solid var(--linea);border-radius:999px;padding:11px 18px;font:500 .84rem var(--testo);cursor:pointer;display:flex;gap:8px;align-items:center;white-space:nowrap}
+.node i{font-style:normal;font-family:var(--display);color:var(--marrone-chiaro);font-weight:300}
+.node[aria-pressed="true"]{background:var(--marrone);color:var(--avorio);border-color:var(--marrone)}
+.node[aria-pressed="true"] i{color:var(--oro)}
+.node:focus-visible{outline:2px solid var(--terracotta);outline-offset:3px}
+.cmid{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:46%;text-align:center}
+.cmid b{display:block;font:300 1.25rem/1.2 var(--display);color:var(--marrone)}
+.cmid span{display:block;margin-top:6px;font-size:.78rem;color:var(--marrone-chiaro)}
+.detail small{font-family:var(--display);font-size:2.4rem;font-weight:300;color:var(--marrone-chiaro);display:block;line-height:1}
+.detail h3{font-size:1.6rem;margin:10px 0 12px}
+.detail p{max-width:48ch;color:rgba(79,59,49,.85)}
+.badges{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:40px 0 0}
+.badges li{border:1px solid var(--linea);border-radius:999px;padding:8px 16px;font-size:.82rem;background:var(--sabbia)}
+@media(max-width:860px){.circle{grid-template-columns:1fr;gap:30px}}
+
+/* territorio */
+.terr{max-width:760px;margin:0 auto;text-align:center}
+.terr .lead{margin-left:auto;margin-right:auto}
+.route{position:relative;display:flex;justify-content:space-between;margin:46px auto 0;max-width:640px}
+.route::before{content:"";position:absolute;left:8%;right:8%;top:11px;border-top:1px dashed var(--marrone-chiaro)}
+.stop{position:relative;background:none;border:0;cursor:pointer;display:grid;justify-items:center;gap:10px;font:500 .88rem var(--testo);color:var(--marrone);padding:0 6px;min-width:0}
+.stop i{width:22px;height:22px;border-radius:50%;background:var(--sabbia);border:1.5px solid var(--marrone-chiaro)}
+.stop[aria-pressed="true"] i{background:var(--terracotta);border-color:var(--terracotta);box-shadow:0 0 0 5px rgba(196,132,106,.25)}
+.stop:focus-visible{outline:2px solid var(--terracotta);outline-offset:4px}
+.tdetail{margin:30px auto 0;max-width:52ch;min-height:5.2em}
+.tdetail b{display:block;font:400 1.2rem var(--display);margin-bottom:6px}
+.tdetail p{color:rgba(79,59,49,.85)}
+
+/* incluso + garanzie */
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:56px}
+.check{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 48px}
+@media(max-width:700px){.check{grid-template-columns:1fr}}
+.check li{padding-left:26px;position:relative;font-size:.97rem}
+.check li::before{content:"";position:absolute;left:2px;top:.62em;width:10px;height:5px;border-left:1.5px solid var(--marrone-chiaro);border-bottom:1.5px solid var(--marrone-chiaro);transform:rotate(-45deg) translateY(-50%)}
+.box{background:var(--marrone);color:var(--avorio);border-radius:6px;padding:32px;align-self:start}
+.box h3{margin-bottom:16px}
+.box ul{margin:0;padding:0;list-style:none;display:grid;gap:16px;font-size:.93rem;color:rgba(245,241,224,.85)}
+.box strong{display:block;color:var(--avorio);font-weight:500}
+.note{margin-top:22px;font-size:.84rem;color:var(--marrone-chiaro)}
+@media(max-width:860px){.two{grid-template-columns:1fr;gap:34px}}
+
+/* casi */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.case{background:var(--sabbia);border-radius:6px;overflow:hidden;min-width:0}
+.case .photo{aspect-ratio:16/10;border-radius:0}
+.case .t{padding:22px 24px 26px}
+.case h3{margin-bottom:4px}
+.case .z{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--marrone-chiaro);margin-bottom:16px}
+.case dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:6px 12px;font-size:.92rem;font-variant-numeric:tabular-nums}
+.case dt{color:rgba(79,59,49,.7)}
+.case dd{margin:0;font-weight:500}
+.ex{display:inline-block;margin-top:14px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--terracotta);font-weight:500}
+@media(max-width:860px){.cases{grid-template-columns:1fr}}
+
+/* team */
+.team{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;margin-top:28px}
+.roles b{display:block;font-weight:500}
+.roles span{font-size:.88rem;color:rgba(245,241,224,.72)}
+@media(max-width:860px){.team{grid-template-columns:1fr;gap:34px}}
+
+/* faq */
+.faq{max-width:760px;margin-top:36px}
+details{border-top:1px solid var(--linea);padding:20px 0}
+details:last-child{border-bottom:1px solid var(--linea)}
+summary{cursor:pointer;font-family:var(--display);font-size:1.2rem;font-weight:400;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--terracotta);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:rgba(79,59,49,.82);max-width:60ch;font-size:.97rem}
+
+/* form */
+.form-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+label{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--oro)}
+input,textarea{font:inherit;color:var(--marrone);background:#fff;border:1px solid transparent;border-radius:6px;padding:13px 14px;width:100%}
+input::placeholder,textarea::placeholder{color:rgba(79,59,49,.45)}
+textarea{min-height:96px;resize:vertical}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;color:rgba(245,241,224,.75);text-transform:none;letter-spacing:0}
+.consent input{width:auto;margin-top:4px}
+.micro{font-size:.82rem;color:rgba(245,241,224,.7)}
+.done{grid-column:1/-1;border:1px solid var(--oro);border-radius:6px;padding:22px;color:var(--avorio)}
+.contacts{margin-top:30px;display:grid;gap:6px;font-size:.95rem;color:rgba(245,241,224,.85)}
+.contacts b{font-weight:500;color:var(--avorio)}
+@media(max-width:860px){.form-wrap{grid-template-columns:1fr;gap:34px}form{grid-template-columns:1fr}}
+
+/* form di chiusura */
+.band.close{background:var(--banda)}
+.close .in{max-width:860px;text-align:center}
+.close .lead{margin-left:auto;margin-right:auto}
+.close form{grid-template-columns:1fr 1fr 1fr;margin-top:34px;text-align:left;align-items:end}
+.close label{color:var(--marrone-chiaro)}
+.close input{color:var(--marrone);background:#fff;border-color:var(--linea)}
+.close input::placeholder{color:rgba(79,59,49,.4)}
+.close .done{border-color:var(--marrone-chiaro);color:var(--marrone)}
+.close .consent{color:rgba(79,59,49,.75)}
+@media(max-width:760px){.close form{grid-template-columns:1fr}}
+
+/* footer (come gli altri siti NAÏA) */
+footer{background:#40332D;color:var(--sabbia);padding:90px 0 30px}
+.footer-top{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:50px;padding-bottom:70px;border-bottom:1px solid var(--linea-inv)}
+.footer-brand .logo-full{display:block;width:min(320px,100%);height:auto;margin-bottom:24px}
+.footer-services{margin:0;color:var(--avorio);font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.8;max-width:36ch}
+.footer-services span{display:block;margin-top:6px;color:var(--oro);font-size:.86rem;font-weight:400;letter-spacing:.02em;text-transform:none}
+.footer-col h4{font:500 .72rem var(--testo);letter-spacing:.14em;text-transform:uppercase;color:var(--oro);margin:0 0 20px}
+.footer-col a{display:block;font-size:.9rem;color:rgba(241,244,248,.78);margin-bottom:13px;text-decoration:none;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-map{margin:40px 0 30px;position:relative;height:260px;border-radius:4px;background:rgba(245,241,224,.06);display:grid;place-items:center}
+.footer-map a{font-size:.85rem;color:var(--oro)}
+.footer-map iframe{position:absolute;inset:0;z-index:1;width:100%;height:100%;border:0;border-radius:4px;filter:grayscale(.25)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:.76rem;color:rgba(245,241,224,.62);flex-wrap:wrap;gap:14px;line-height:1.6}
+.footer-bottom a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;row-gap:40px}}
+@media(max-width:520px){.footer-top{grid-template-columns:1fr}}
+
+/* barra mobile */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--marrone);border-top:1px solid var(--linea-inv);display:flex;gap:10px;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.bar a{flex:1;text-align:center;text-decoration:none;padding:12px 8px;border-radius:8px;font-size:.84rem;font-weight:500;border:1px solid var(--linea-inv);color:var(--avorio)}
+.bar a.p{background:var(--terracotta);color:var(--inchiostro);border-color:var(--terracotta);flex:1.6}
+@media(min-width:861px){.bar{display:none}body{padding-bottom:0}}
+.cta{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap}
+.terr .cta{justify-content:center}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
 </head>
 <body>
-<header><div class="wrap headbar"><a class="brand" href="/" aria-label="NAIA Home Rentals & Management"><img src="/naia-logo-orizzontale-marrone.svg" alt="NAÏA Collection" width="196" height="34" style="height:34px;width:auto;display:block;"></a><div class="headbar-right"><a href="/#valutazione" class="btn btn-primary">Valuta la tua proprietà</a></div></div></header>
-<main>
-<section class="zone-hero"><div class="wrap"><div class="crumbs"><a href="/">Home</a> / Pescia</div><span class="eyebrow">Gestione affitti brevi · Pescia</span><h1>Gestione affitti brevi a Pescia</h1><p>Hai una casa o una villa a Pescia o sulle colline della Valdinievole? Ne curiamo la messa a reddito in affitto breve, con un team locale e una gestione completa e trasparente.</p><a class="btn btn-primary" href="/#valutazione">Richiedi una valutazione gratuita</a></div></section>
-<section class="zone-body"><div class="wrap"><h2>Un servizio completo, su misura</h2><p>Dalla preparazione dell’immobile alla pubblicazione degli annunci, dalla gestione dei prezzi all’accoglienza degli ospiti, fino a pulizie e manutenzioni: ogni dettaglio è gestito dal nostro team, con un unico referente per te.</p><h2>Pescia e la Valdinievole</h2><p>Pescia, la “città dei fiori”, unisce borghi, colline, ville e campagna a pochi minuti da Montecatini Terme, Lucca e Pistoia: un contesto molto apprezzato da chi cerca soggiorni autentici in Toscana. Per questo conosciamo bene il tipo di ospite e il livello di servizio che questo territorio richiede.</p><h2>Perché NAIA</h2><ul><li>Radicati nel territorio: operiamo in un’area precisa, non ovunque.</li><li>Valutazione gratuita e riservata di immobile e potenziale di resa.</li><li>Rendiconto trasparente di ricavi e costi.</li><li>Assistenza ospiti 24/7.</li></ul><h2>Domande frequenti</h2><div class="faq-item"><h3>Gestite proprietà a Pescia e dintorni?</h3><p>Sì: Pescia, Uzzano, Chiesina Uzzanese, Collodi, Monsummano Terme, Montecatini Terme e tutta la Valdinievole.</p></div><div class="faq-item"><h3>Come richiedo una valutazione?</h3><p>Compila il modulo nella home o scrivici su WhatsApp: ti rispondiamo con una prima analisi gratuita e senza impegno.</p></div><div class="faq-item"><h3>Quali servizi sono inclusi?</h3><p>Annunci, prezzi, prenotazioni, check-in, pulizie, biancheria, manutenzioni e assistenza ospiti.</p></div>
-<h2>Parliamo della tua proprietà</h2><p>Raccontaci casa o villa: ti diciamo con onestà quanto può rendere e se è adatta alla nostra collection. La valutazione è gratuita e riservata.</p>
-<div class="zone-links"><a class="btn btn-primary" href="/#valutazione">Valuta la tua proprietà</a><a class="btn btn-ghost" href="https://wa.me/393516740842?text=Ciao%21%20Vorrei%20informazioni%20sulla%20gestione%20affitti%20brevi%20della%20mia%20propriet%C3%A0." target="_blank" rel="noopener">Scrivici su WhatsApp</a><a class="btn btn-ghost" href="/montecatini-terme/">Gestione affitti brevi Montecatini Terme</a></div>
-</div></section>
+
+<header>
+  <div class="in">
+    <a href="/" aria-label="NAÏA Collection"><img src="/lp-logo-avorio.png" alt="NAÏA Collection" width="158" height="30"></a>
+    <nav>
+      <a href="#servizi">Servizi</a>
+      <a href="#metodo">Metodo</a>
+      <a href="#zone">Zone</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn" href="#contatti">Valutazione gratuita</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="band dark">
+  <div class="in hero">
+    <div>
+      <span class="eyebrow">Gestione affitti brevi · Pescia</span>
+      <h1>Gestione affitti brevi a <em>Pescia</em></h1>
+      <p class="sub">Hai una casa o una villa a Pescia o sulle colline della Valdinievole? Ne curiamo la messa a reddito in affitto breve, con un team locale e una gestione completa e trasparente.</p>
+      <div class="actions">
+        <a class="btn" href="#contatti">Richiedi una valutazione gratuita</a>
+        <a class="btn ghost" href="https://wa.me/393516740842?text=Ciao%21%20Vorrei%20maggiori%20informazioni%20sulla%20gestione%20affitti%20brevi%20della%20mia%20propriet%C3%A0." target="_blank" rel="noopener">Preferisci parlarne subito? WhatsApp</a>
+      </div>
+      <p class="trust">Team locale · Valutazione gratuita · Risposta entro 24 ore</p>
+    </div>
+    <div class="photo"><img src="/lp-territorio-2.jpg" alt="Borgo toscano con castello tra le colline"></div>
+  </div>
+</section>
+
+<section class="band sand2">
+  <div class="in problem">
+    <div>
+      <span class="eyebrow">Pescia e la Valdinievole</span>
+      <h2>La “città dei fiori”, a pochi minuti <strong>da tutto.</strong></h2>
+    </div>
+    <div><p>Pescia unisce borghi, colline, ville e campagna a pochi minuti da Montecatini Terme, Lucca e Pistoia: un contesto molto apprezzato da chi cerca soggiorni autentici in Toscana.</p><p>Per questo conosciamo bene il tipo di ospite e il livello di servizio che questo territorio richiede.</p></div>
+  </div>
+</section>
+
+<section class="band" id="servizi">
+  <div class="in">
+    <span class="eyebrow">I nostri servizi</span>
+    <h2>Un servizio completo, <strong>su misura.</strong></h2>
+    <p class="lead">Dalla preparazione dell’immobile alla pubblicazione degli annunci, dalla gestione dei prezzi all’accoglienza degli ospiti, fino a pulizie e manutenzioni: ogni dettaglio è gestito dal nostro team, con un unico referente per te.</p>
+    <ul class="check"><li>Preparazione dell’immobile</li><li>Pubblicazione degli annunci</li><li>Gestione di prezzi e prenotazioni</li><li>Accoglienza e check-in degli ospiti</li><li>Pulizie e biancheria</li><li>Manutenzioni</li><li>Assistenza ospiti 24/7</li><li>Rendiconto trasparente di ricavi e costi</li></ul>
+    <p class="note">Lavoriamo a commissione: nessun investimento da parte tua e nessun costo fisso.</p>
+  </div>
+</section>
+
+<section class="band dark" id="metodo">
+  <div class="in">
+    <span class="eyebrow">Il metodo</span>
+    <h2>Come iniziamo, passo dopo passo.</h2>
+    <ol class="steps"><li><b>1</b><h3>Valutazione</h3><p>Valutazione gratuita e riservata di immobile e potenziale di resa.</p></li><li><b>2</b><h3>Proposta chiara</h3><p>Un unico referente e condizioni chiare, senza formule standard.</p></li><li><b>3</b><h3>Annunci e prezzi</h3><p>Annunci pubblicati e prezzi gestiti per attrarre l’ospite giusto.</p></li><li><b>4</b><h3>Gestione</h3><p>Accoglienza, pulizie e manutenzioni. Tu ricevi il rendiconto.</p></li></ol>
+    <div class="cta"><a class="btn" href="#contatti">Richiedi una valutazione gratuita</a></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="in">
+    <span class="eyebrow">Perché scegliere NAÏA</span>
+    <h2>Radicati nel territorio, <strong>non ovunque.</strong></h2>
+    <ul class="check"><li>Radicati nel territorio: operiamo in un’area precisa, non ovunque.</li><li>Valutazione gratuita e riservata di immobile e potenziale di resa.</li><li>Rendiconto trasparente di ricavi e costi.</li><li>Assistenza ospiti 24/7.</li></ul>
+  </div>
+</section>
+
+<section class="band sand2" id="zone">
+  <div class="in problem">
+    <div>
+      <span class="eyebrow">Pescia e dintorni</span>
+      <h2>Dove gestiamo, <strong>vicino a te.</strong></h2>
+      <ul class="badges"><li>Pescia</li><li>Uzzano</li><li>Chiesina Uzzanese</li><li>Collodi</li><li>Monsummano Terme</li><li>Montecatini Terme</li></ul>
+    </div>
+    <div>
+      <p>Seguiamo proprietà a Pescia, Uzzano, Chiesina Uzzanese, Collodi, Monsummano Terme, Montecatini Terme e in tutta la Valdinievole.</p>
+      <p>Il nostro ufficio è a Montecatini Terme, a pochi minuti: ci trovi di persona quando vuoi.</p>
+      <div class="cta"><a class="btn" href="/montecatini-terme/">Gestione affitti brevi a Montecatini Terme</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="band dark">
+  <div class="in team">
+    <div>
+      <span class="eyebrow">Chi siamo</span>
+      <h2>Siamo qui, vicino a te.</h2>
+      <p class="lead">Un ufficio a Montecatini Terme e un team che conosce le proprietà di cui si occupa.</p>
+      <div class="roles">
+        <div><b>Un referente di progetto</b><span>Il tuo contatto diretto, dall'analisi alla gestione</span></div>
+        <div><b>Un team per le manutenzioni</b><span>Giardino, piscina, guasti e imprevisti</span></div>
+        <div><b>Un team per le pulizie</b><span>Cambi, biancheria e preparazione degli ospiti</span></div>
+        <div><b>Un ufficio a Montecatini Terme</b><span>Ci trovi di persona, in Via Solferino 5</span></div>
+      </div>
+    </div>
+    <div class="photo"><img src="/lp-ufficio.jpg" alt="Il nostro ufficio a Montecatini Terme" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="band" id="faq">
+  <div class="in">
+    <span class="eyebrow">Domande frequenti</span>
+    <h2>Quello che ci chiedono prima di iniziare.</h2>
+    <div class="faq"><details><summary>Gestite proprietà a Pescia e dintorni?</summary><p>Sì: Pescia, Uzzano, Chiesina Uzzanese, Collodi, Monsummano Terme, Montecatini Terme e tutta la Valdinievole.</p></details><details><summary>Come richiedo una valutazione?</summary><p>Compila il modulo qui sotto o scrivici su WhatsApp: ti rispondiamo con una prima analisi gratuita e senza impegno.</p></details><details><summary>Quali servizi sono inclusi?</summary><p>Annunci, prezzi, prenotazioni, check-in, pulizie, biancheria, manutenzioni e assistenza ospiti.</p></details></div>
+    <div class="cta"><a class="btn" href="#contatti">Hai altre domande? Scrivici</a><a class="btn ghost" href="https://wa.me/393516740842" target="_blank" rel="noopener">Chiedi su WhatsApp</a></div>
+  </div>
+</section>
+
+<section class="band dark" id="contatti">
+  <div class="in form-wrap">
+    <div>
+      <span class="eyebrow">Parliamo della tua proprietà</span>
+      <h2>Richiedi una valutazione gratuita.</h2>
+      <p class="lead">Raccontaci casa o villa: ti diciamo con onestà quanto può rendere e se è adatta alla nostra collection. La valutazione è gratuita e riservata. Ti rispondiamo entro 24 ore.</p>
+      <div class="contacts">
+        <span><b>Telefono e WhatsApp</b> +39 351 674 0842</span>
+        <span><b>Email</b> info@naiacollection.com</span>
+        <span><b>Ufficio</b> Via Solferino 5, 51016 Montecatini Terme (PT)</span>
+      </div>
+    </div>
+    <form id="lead" novalidate>
+      <div class="f"><label for="nome">Nome e cognome</label><input id="nome" autocomplete="name" placeholder="Maria Rossi"></div>
+      <div class="f"><label for="email">Email</label><input id="email" type="email" autocomplete="email" placeholder="nome@email.it"></div>
+      <div class="f"><label for="tel">Telefono</label><input id="tel" type="tel" autocomplete="tel" placeholder="+39 333 123 4567"></div>
+      <div class="f"><label for="loc">Località della proprietà</label><input id="loc" value="Pescia"></div>
+      <div class="f full"><label for="msg">Messaggio (facoltativo)</label><textarea id="msg" placeholder="Raccontaci in due righe la tua proprietà"></textarea></div>
+      <label class="consent f full" for="ok"><input id="ok" type="checkbox"> Ho letto l'informativa sulla privacy e acconsento al trattamento dei dati.</label>
+      <div class="f full"><button class="btn" type="submit">Richiedi la valutazione</button></div>
+      <p class="micro f full">Ti rispondiamo entro 24 ore. Nessun impegno.</p>
+      <div class="done" id="done" hidden role="status">Grazie! Abbiamo ricevuto la tua richiesta: ti rispondiamo entro 24 ore.</div>
+    </form>
+  </div>
+</section>
 </main>
-<footer class="site"><div class="wrap"><div class="footer-bottom"><span>© 2026 NAÏA Collection SRL · Via Solferino 5, 51016 Montecatini Terme (PT) · P.IVA 02128780471 · REA PT-626051 · <a href="mailto:info@naiacollection.com" style="color:inherit;">info@naiacollection.com</a> · <a href="https://www.naiacollection.com" style="color:inherit;">www.naiacollection.com</a></span><span class="note"><a href="/" style="color:inherit;">Home</a></span></div></div></footer>
-</body></html>
+
+<footer>
+  <div class="in">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img class="logo-full" src="/lp-logo-avorio.png" alt="NAÏA Collection" width="320" height="61">
+        <p class="footer-services">Property Management · Affitti brevi e turistici · Home Decor &amp; Restyling<span>per ville, casali e dimore di pregio</span></p>
+      </div>
+      <div class="footer-col">
+        <h4>Ecosistema</h4>
+        <a href="https://naiacollection.com" target="_blank" rel="noopener">NAÏA Collection (hub)</a>
+        <a href="https://travel.naiacollection.com" target="_blank" rel="noopener">NAÏA Travel</a>
+        <a href="https://revalue.naiacollection.com" target="_blank" rel="noopener">NAÏA ReValue</a>
+        <a href="https://homerentals.naiacollection.com" target="_blank" rel="noopener">NAÏA Rentals &amp; Management</a>
+      </div>
+      <div class="footer-col">
+        <h4>Zone e servizi</h4>
+        <a href="/">Per proprietari</a>
+        <a href="/montecatini-terme/">Affitti brevi Montecatini Terme</a>
+        <a href="/pescia/">Affitti brevi Pescia</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <a href="mailto:info@naiacollection.com">info@naiacollection.com</a>
+        <a href="https://wa.me/393516740842" target="_blank" rel="noopener">+39 351 674 0842</a>
+        <a href="https://www.instagram.com/na.iacollection/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://it.linkedin.com/company/naia-collection" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-map">
+      <a href="https://www.google.com/maps/search/?api=1&query=Via+Solferino+5%2C+51016+Montecatini+Terme+PT" target="_blank" rel="noopener">Apri la mappa su Google Maps</a>
+      <iframe src="https://maps.google.com/maps?q=Via+Solferino+5,+51016+Montecatini+Terme+PT&amp;z=16&amp;output=embed" title="NAÏA Collection – Via Solferino 5, Montecatini Terme" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NAÏA Collection SRL · <a href="https://www.google.com/maps/search/?api=1&query=Via+Solferino+5%2C+51016+Montecatini+Terme+PT" target="_blank" rel="noopener">Via Solferino 5, 51016 Montecatini Terme (PT)</a> · <a href="https://www.google.com/maps/search/?api=1&query=Via+Solferino+5%2C+51016+Montecatini+Terme+PT" target="_blank" rel="noopener">Google Maps</a> · P.IVA 02128780471 · REA PT-626051 · SDI: KRRH6B9 · <a href="mailto:info@naiacollection.com">info@naiacollection.com</a> · <a href="https://www.naiacollection.com">www.naiacollection.com</a> — Tutti i diritti riservati</span>
+      <span>Toscana, Italia</span>
+    </div>
+  </div>
+</footer>
+
+<div class="bar">
+  <a href="https://wa.me/393516740842" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="p" href="#contatti">Richiedi una valutazione</a>
+</div>
+
+<script>
+
+var URL_LEAD="https://script.google.com/macros/s/AKfycbwsVg-W3EEs1Ac6wt56hHLyApqA7FeuYCFY-E-xdqpz6bEo4t89fDtHxkjbn4C4hg6qiw/exec";
+function v(id){var e=document.getElementById(id);return e?e.value.trim():""}
+function wire(fid,map,formId){
+  var f=document.getElementById(fid);if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var p={who:"proprietario",type:"affitto_breve",propName:"",city:v(map.loc),region:"Toscana",address:"",sqm:"",rooms:"",baths:"",status:"",market:"",revenue:"",availability:"",name:v(map.nome),phone:v(map.tel),email:map.email?v(map.email):"",notes:(map.msg?v(map.msg):"")+" [form: "+formId+"]"};
+    var ok=document.getElementById(map.ok);
+    if(!p.name||(!p.phone&&!p.email)||!(ok&&ok.checked)){var m=f.querySelector('.err');if(!m){m=document.createElement('p');m.className='micro f full err';m.setAttribute('role','alert');f.insertBefore(m,f.querySelector('.done'))}m.textContent="Inserisci nome, un recapito (telefono o email) e conferma il consenso privacy.";return}
+    var er=f.querySelector('.err');if(er)er.remove();
+    var b=f.querySelector('button[type=submit]');if(b)b.disabled=true;
+    try{fetch(URL_LEAD,{method:"POST",mode:"no-cors",body:JSON.stringify(p)})}catch(x){}
+    try{if(window.gtag)gtag('event','generate_lead',{lead_type:'proprietario',form_id:formId})}catch(x){}
+    try{if(window.fbq)fbq('track','Lead',{content_name:formId,content_category:'proprietario'})}catch(x){}
+    f.querySelector('.done').hidden=false;
+  });
+}
+wire('lead',{nome:'nome',email:'email',tel:'tel',loc:'loc',msg:'msg',ok:'ok'},'homerentals_pescia_valutazione');
+</script>
+
+</body>
+</html>
