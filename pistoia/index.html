@@ -291,6 +291,7 @@ footer{background:#40332D;color:var(--sabbia);padding:90px 0 30px}
 .bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--marrone);border-top:1px solid var(--linea-inv);display:flex;gap:10px;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .bar a{flex:1;text-align:center;text-decoration:none;padding:12px 8px;border-radius:8px;font-size:.84rem;font-weight:500;border:1px solid var(--linea-inv);color:var(--avorio)}
 .bar a.p{background:var(--terracotta);color:var(--inchiostro);border-color:var(--terracotta);flex:1.6}
+.footer-zone{font-size:.88rem;line-height:1.8;margin:14px 0 0;opacity:.85}.footer-col .footer-zone a{display:inline;padding:0}
 @media(max-width:860px){nav a.btn{display:none}}
 @media(min-width:861px){.bar{display:none}body{padding-bottom:0}}
 .cta{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap}
@@ -461,10 +462,7 @@ footer{background:#40332D;color:var(--sabbia);padding:90px 0 30px}
       <div class="footer-col">
         <h4>Zone e servizi</h4>
         <a href="/">Per proprietari</a>
-        <a href="/montecatini-terme/">Affitti brevi Montecatini Terme</a>
-        <a href="/pescia/">Affitti brevi Pescia</a>
-        <a href="/buggiano/">Affitti brevi Buggiano</a>
-        <a href="/pistoia/">Affitti brevi Pistoia</a>
+        <p class="footer-zone">Zone: <a href="/montecatini-terme/">Montecatini Terme</a> · <a href="/pescia/">Pescia</a> · <a href="/buggiano/">Buggiano</a> · <a href="/pistoia/">Pistoia</a></p>
       </div>
       <div class="footer-col">
         <h4>Contatti</h4>
